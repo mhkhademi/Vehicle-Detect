@@ -19,7 +19,7 @@ while True:
         break
     
     gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
-    bike = bike_cascade.detectMultiScale(gray,1.3,2)
+    bike = bike_cascade.detectMultiScale(gray,1.5,3)
 
     for(a,b,c,d) in bike:
         cv2.rectangle(img,(a,b),(a+c,b+d),(0,255,210),4)
